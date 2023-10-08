@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Services = ({ events }) => {
     const { id, title, sub_title, description, price, image } = events;
     return (
@@ -7,8 +9,11 @@ const Services = ({ events }) => {
             <div className="card-body">
                 <h2 className="font-bold sm:text-center lg:text-left">{title}</h2>
                 <p className="sm:text-center lg:text-left">{sub_title}</p>
+                <p className="sm:text-center lg:text-left">Price: ${price} </p>
                 <div className="card-actions lg:justify-end md:justify-center sm:justify-center">
+                    <Link to={`/events/${id}`}>
                     <button className="btn btn-secondary bg-orange-400 font-semibold">Details</button>
+                    </Link>
                 </div>
             </div>
         </div>

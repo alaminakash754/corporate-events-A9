@@ -57,7 +57,7 @@ const Navbar = () => {
                         <img src={userInitialPhoto} />
                     </div>
                 </label>
-                <Link><button className="btn bg-orange-400">Login</button></Link>
+                <Link to='/login'><button className="btn bg-orange-400">Login</button></Link>
             </div>
         </div>
     );
