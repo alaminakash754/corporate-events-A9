@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Annual General Meeting",
+        "sub_title": "2023 Annual General Meeting",
+        "price": 5000,
+        "description": "Join us for our 2023 Annual General Meeting, where we will review the achievements of the past year and discuss our plans for the future. This event is open to all stakeholders, shareholders, and interested parties. Engage with our leadership team, ask questions, and gain insights into our strategic direction. Your presence and participation are valued and appreciated. Be part of the conversation that shapes our future.",
+        "category": "business",
+        "image": "https://i.ibb.co/4TvYzBQ/agm-used.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Product Launch Event",
+        "sub_title": "New Product Unveiling: Innovation Redefined",
+        "price": 7500,
+        "description": "Be the first to witness innovation at its finest! Join us for our exclusive Product Launch Event, where we will unveil our latest creation. Experience firsthand the features that redefine industry standards. Our experts will provide in-depth demonstrations, and you'll have the opportunity for hands-on experience. Stay ahead of the curve and discover what makes our new product a game-changer.",
+        "category": "technology",
+        "image": "https://i.ibb.co/R9Tt9bJ/lanching-product.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Team Building Workshop",
+        "sub_title": "Building Stronger Teams: A Workshop Experience",
+        "price": 3000,
+        "description": "Nurture teamwork, enhance communication, and foster collaboration with our Team Building Workshop. Designed for professionals at all levels, this workshop focuses on interactive activities and exercises that strengthen bonds within teams. Learn effective problem-solving techniques, practice active listening, and engage in fun challenges that promote unity. A cohesive team is the foundation of any successful organization; invest in your team's growth today.",
+        "category": "professional development",
+        "image": "https://i.ibb.co/tskRyM0/team-building.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Award Ceremony",
+        "sub_title": "Excellence Recognized: Annual Award Ceremony",
+        "price": 4000,
+        "description": "Celebrate excellence with us at our Annual Award Ceremony. Recognizing outstanding achievements, dedication, and innovation, this event honors individuals and teams who have made significant contributions. Join us for an elegant evening of accolades, fine dining, and inspiring speeches. Your presence adds to the prestige of this event, and together, we applaud the remarkable accomplishments that drive our organization forward.",
+        "category": "recognition",
+        "image": "https://i.ibb.co/HnnFH0K/award-ceremony.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Corporate Anniversary",
+        "sub_title": "Celebrating Milestones: 25 Years of Success",
+        "price": 6000,
+        "description": "Join us in celebrating a quarter-century of success! Our Corporate Anniversary event marks 25 years of dedication, growth, and innovation. Reflect on our journey together and envision the promising future ahead. Engage in nostalgic moments, network with industry peers, and enjoy entertainment that captures the essence of our organization's spirit. Together, let's toast to 25 years of excellence and look forward to the decades to come.",
+        "category": "milestone",
+        "image": "https://i.ibb.co/XtqCZsB/Corporate-Anniversary-Celebration.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Trade Show or Expo",
+        "sub_title": "Discover Innovation: International Trade Expo",
+        "price": 8500,
+        "description": "Immerse yourself in a world of innovation at our International Trade Expo. Explore cutting-edge products and services from global exhibitors. Engage with industry leaders, attend informative seminars, and participate in hands-on demonstrations. Whether you are a business owner seeking partnerships or a consumer interested in the latest trends, this expo offers a unique experience. Join us and be part of a vibrant marketplace where ideas flourish and collaborations thrive.",
+        "category": "business",
+        "image": "https://i.ibb.co/0tjCtFr/trade-and-expo.jpg"
+    }
+]
