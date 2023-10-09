@@ -18,9 +18,9 @@ console.log(greetign);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: `A`
+#### Answer: A
 
-<i>Variable has been assigned an empty object Thats why it give an empty object</i>
+- Variable has been assigned an empty object Thats why it give an empty object
 
 </p>
 </details>
