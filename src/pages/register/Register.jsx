@@ -1,18 +1,18 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { EventContext } from "../../provider/UserProvider";
+import UserProvider, { EventContext } from "../../provider/UserProvider";
 
 
-const Login = () => {
+const Register = () => {
 
-    const { signInUser } = useContext(EventContext)
-
-    const handleLogin = e => {
+    const { createUser } = useContext(EventContext);
+    const handleRegister = e => {
         e.preventDefault();
         const email = e.target.email.value;
+        const name = e.target.name.value;
         const password = e.target.password.value;
-        console.log(email, password)
-        signInUser(email, password)
+        console.log(name, email, password)
+        createUser(email, password)
             .then(result => {
                 console.log(result.user)
             })
@@ -25,16 +25,28 @@ const Login = () => {
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col ">
                     <div className="text-center ">
-                        <h1 className="text-5xl font-bold mb-3 text-orange-400">Please Login Here!!!</h1>
+                        <h1 className="text-5xl font-bold text-orange-400 mb-3">Register Here now!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
-                            <form onSubmit={handleLogin}>
+                            <form onSubmit={handleRegister}>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Name</span>
+                                    </label>
+                                    <input type="text" name='name' placeholder="Name" required className="input input-bordered" />
+                                </div>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Email</span>
                                     </label>
                                     <input type="email" name='email' placeholder="email" required className="input input-bordered" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Photo</span>
+                                    </label>
+                                    <input type="text" name='photo' placeholder="Photo" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -46,11 +58,10 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-6">
-                                    <button className="btn btn-primary">Login</button>
+                                    <button className="btn btn-primary">Register</button>
                                 </div>
                             </form>
-                            <p>New User? Please <Link to='/register'><button className="btn btn-link">Register</button></Link></p>
-                            <p><button className="btn btn-ghost" >Google</button></p>
+                            <p>Already have account? please <Link to='/login'><button className="btn btn-link">Login</button></Link></p>
                         </div>
                     </div>
                 </div>
@@ -59,4 +70,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Register;

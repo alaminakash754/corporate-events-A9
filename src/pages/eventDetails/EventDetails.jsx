@@ -11,9 +11,9 @@ const EventDetails = () => {
             
             <div className="mt-10">
                 <img className="mx-auto" src={event.image} alt="" />
-                <h2>{event.title}</h2>
-                <p>{event.price}</p>
-                <p>{event.description}</p>
+                <h2 className="text-xl font-bold text-orange-400 my-4">{event.title}</h2>
+                <p className="text-lg font-semibold text-orange-400 mb-5"> <span className="font-medium">Price: $</span>{event.price}</p>
+                <p className="mb-5"><span className="text-lg font-semibold text-orange-400">Details: <br /></span> {event.description}</p>
             </div>
         </div>
     );

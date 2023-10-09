@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import userInitialPhoto from '../../../assets/user.png'
 const Navbar = () => {
 
-   
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -35,19 +34,19 @@ const Navbar = () => {
                 <ul className="menu menu-horizontal px-1 gap-1">
                     <li><NavLink to="/"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-[#FF444A] font-bold underline" : ""
+                            isPending ? "pending hover:bg-orange-400" : isActive ? "text-[#FF444A] hover:bg-orange-400 font-bold underline" : ""
                         }>Home</NavLink></li>
                     <li><NavLink to="/gallery"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-[#FF444A] font-bold underline" : ""
+                            isPending ? "pending hover:bg-orange-400" : isActive ? "text-[#FF444A] hover:bg-orange-400 font-bold underline" : ""
                         }>Gallery</NavLink></li>
                     <li><NavLink to="/about"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-[#FF444A] font-bold underline" : ""
+                            isPending ? "pending hover:bg-orange-400" : isActive ? "text-[#FF444A] hover:bg-orange-400 font-bold underline" : ""
                         }>About</NavLink></li>
                     <li><NavLink to="/blog"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-[#FF444A] font-bold underline" : ""
+                            isPending ? "pending hover:bg-orange-400" : isActive ? "text-[#FF444A] hover:bg-orange-400 font-bold underline" : ""
                         }>Blog</NavLink></li>
                 </ul>
             </div>
