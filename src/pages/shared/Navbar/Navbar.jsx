@@ -64,7 +64,7 @@ const Navbar = () => {
                 {
                     user ?
                         <>
-                            <h3>{user.displayName}</h3>
+                            <h3 className="mr-5">{user.displayName}</h3>
                             <img className="w-10 h-10 rounded-full mr-2" src={user.photoURL} />
                             <button onClick={handleSignOut} className="btn btn-sm">Sign out</button>
 

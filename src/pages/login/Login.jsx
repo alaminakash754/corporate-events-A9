@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { EventContext } from "../../provider/UserProvider";
 
 
 const Login = () => {
+    const [logInError, setLogInError] = useState('');
+    const [successLogin, setSuccessLogin] = useState('')
 
     const { signInUser, signWithGoogle } = useContext(EventContext);
     const navigate = useNavigate();
@@ -12,7 +14,16 @@ const Login = () => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password)
+        console.log(email, password);
+
+        setLogInError('');
+        setSuccessLogin('');
+
+        
+        if(password.length < 6){
+            setLogInError
+        }
+        
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
