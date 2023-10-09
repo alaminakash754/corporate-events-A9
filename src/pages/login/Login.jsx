@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { EventContext } from "../../provider/UserProvider";
+import swal from 'sweetalert';
 
 
 const Login = () => {
@@ -19,19 +20,20 @@ const Login = () => {
         setLogInError('');
         setSuccessLogin('');
 
-        
-        if(password.length < 6){
-            setLogInError
-        }
+
+       
         
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
                 e.target.reset();
+                setSuccessLogin(swal("User logged in successfully"));
                 navigate('/');
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                setLogInError(swal("Oops!", "email or password are wrong"));
+                
             })
     }
 
@@ -76,6 +78,12 @@ const Login = () => {
                             <p>New User? Please <Link to='/register'><button className="btn btn-link">Register</button></Link></p>
                             <p><button onClick={handleGoogleSignIn} className="btn btn-ghost" >Google</button></p>
                         </div>
+                        {
+                            logInError && <p className="text-red-700">{logInError}</p>
+                        }
+                        {
+                            successLogin && <p className="text-green-600">{successLogin}</p>
+                        }
                     </div>
                 </div>
             </div>
