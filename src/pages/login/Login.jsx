@@ -1,11 +1,12 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { EventContext } from "../../provider/UserProvider";
 
 
 const Login = () => {
 
-    const { signInUser } = useContext(EventContext)
+    const { signInUser, signWithGoogle } = useContext(EventContext);
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -15,10 +16,22 @@ const Login = () => {
         signInUser(email, password)
             .then(result => {
                 console.log(result.user)
+                e.target.reset();
+                navigate('/');
             })
             .catch(error => {
                 console.error(error)
             })
+    }
+
+    const handleGoogleSignIn = () => {
+        signWithGoogle()
+        .then(result => {
+           console.log(result.user)
+        })
+        .catch(error => {
+            console.error(error)
+        })
     }
     return (
         <div>
@@ -50,7 +63,7 @@ const Login = () => {
                                 </div>
                             </form>
                             <p>New User? Please <Link to='/register'><button className="btn btn-link">Register</button></Link></p>
-                            <p><button className="btn btn-ghost" >Google</button></p>
+                            <p><button onClick={handleGoogleSignIn} className="btn btn-ghost" >Google</button></p>
                         </div>
                     </div>
                 </div>
